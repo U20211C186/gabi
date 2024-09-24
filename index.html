@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gabi</title>
 </head>
 <style>
-    body{
+    body {
         margin: 0;
         padding: 0;
         min-height: 100vh;
@@ -15,7 +14,7 @@
         justify-content: center;
         background: #0b1522;
     }
-    .heart{
+    .heart {
         height: 150px;
         width: 150px;
         background-color: red;
@@ -25,36 +24,51 @@
         animation: palpitar 0.5s linear infinite alternate;
     }
 
-    .contenido{
+    .contenido {
         position: fixed;
         margin-bottom: 50px;
         text-align: center;
     }
-    h1{color:white;}
-    h2{color:white;}
-
-    @keyframes palpitar{
-        0%{transform: rotate(45deg) scale(1.10);}
-        80%{transform: rotate(45deg) scale(1.0);}
-        100%{transform: rotate(45deg) scale(0.8);}
+    h1 {
+        color: white;
+        font-size: 25px;
+    }
+    h2 {
+        color: white;
+        position: absolute;
+        top: 40px; /* Ajuste para centrar mejor */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h2 img {
+        width: 80px; /* Ajuste para que la imagen quede dentro del corazón */
+        height: 80px; /* Ajuste de altura */
+        border-radius: 50%;
+        object-fit: cover; /* Asegura que la imagen mantenga la proporción dentro del contenedor */
     }
 
-    .heart::before{
+    @keyframes palpitar {
+        0% {transform: rotate(45deg) scale(1.10);}
+        80% {transform: rotate(45deg) scale(1.0);}
+        100% {transform: rotate(45deg) scale(0.8);}
+    }
+
+    .heart::before {
         content: "";
         position: absolute;
         height: 150px;
         width: 150px;
-        background:red;
+        background: red;
         right: 50%;
         border-radius: 50%;
         box-shadow: 20px 20px 150px #f20044;
     }
-    .heart::after{
+    .heart::after {
         content: "";
         position: absolute;
         height: 150px;
         width: 150px;
-        background:red;
+        background: red;
         top: -50%;
         border-radius: 50%;
         box-shadow: 20px 20px 150px #f20044;
@@ -63,8 +77,10 @@
 <body>
     <div class="heart"></div>
     <div class="contenido">
-        <h1>Gabriela</h1>
-        <h2>Taipe Sedano</h2>
+        <h1>Gordi y Sam</h1>
+        <h2>
+            <img src="gordi.png" alt="Imagen en el corazón">
+        </h2>
     </div>
 </body>
 </html>
